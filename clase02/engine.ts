@@ -3,4 +3,7 @@ export class Engine {
   public constructor(type: string) {
     this.type = type;
   }
+  getEngine() {
+    console.log("Engine type:", this.type);
+  }
 };
