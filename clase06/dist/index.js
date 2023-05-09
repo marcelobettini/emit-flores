@@ -1,4 +1,4 @@
-"use strict";
+import { Todo } from "./todo.js";
 let todoArr = [];
 const tasksContainer = document.getElementById("tasks-container");
 const form = document.querySelector("form");
@@ -12,17 +12,6 @@ function handleForm(e) {
     todoArr = [...todoArr, newTodo];
     DOM.renderData();
     DOM.clearForm();
-}
-class Todo {
-    constructor(description) {
-        this.id = this.generateId();
-        this.description = description;
-    }
-    ;
-    generateId() {
-        return Math.random().toString().substring(2, 10);
-    }
-    ;
 }
 //todo method to update the DOM & clear input from prev text
 class DOM {
