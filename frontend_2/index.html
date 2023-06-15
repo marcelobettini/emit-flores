@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="cardContainer">
+
+  </div>
+</body>
+
+
+<script>
+  const container = document.getElementById("cardContainer");
+  const ttl = "título";
+  const url = "https://images.pexels.com/photos/16496268/pexels-photo-16496268.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+  const desc = "algo sobre la foto, bla bla bla";
+
+  const card = document.createElement("div");
+  card.innerHTML = `
+  <h2>${ttl}</h2>
+  <img src=${url} alt=${ttl}>
+  <p>${desc}</p>
+  `;
+  container.appendChild(card)
+
+
+
+</script>
+
+<style>
+  body {
+    zoom: 1.5
+  }
+
+  #container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 1rem;
+    border: 1px solid;
+  }
+
+  img {
+    width: 200px
+  }
+
+  .hotpink {
+    color: white;
+    background-color: hotpink;
+  }
+
+  button {
+    width: 8rem;
+    height: 2rem;
+    border: none;
+    background: lightcyan
+  }
+</style>
+
+</html>

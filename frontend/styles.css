@@ -1,0 +1,27 @@
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  column-gap: 1rem;
+  row-gap: 2rem
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  width: 270px;
+  padding: 1rem;
+  border: 1px solid tomato;
+  box-shadow: 4px 4px 8px darkgrey;
+}
+
+img {
+  width: 150px;
+}
+
+p {
+  font-size: 1.2rem;
+}

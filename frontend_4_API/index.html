@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script type="text/javascript" src="./index.js" defer></script> -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+  <title>MockAPI</title>
+  <style>
+    dialog {
+
+      padding: 4rem;
+      min-width: fit-content;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>API REST</h1>
+    <p>Práctica de consumo de recursos a través de endoints. Métodos GET, POST, PUT y DELETE.</p>
+    <p>Utilizamos el backend de prueba de <a href="https://mockapi.io/" target="_blank">MockAPI</a></p>
+  </header>
+  <button id="open-modal">open modal</button>
+
+  <dialog id="modal">
+    <form action="" method="dialog">
+      <label for="fullName">Nombre completo
+        <input type="text" id="fullName" name="fullName" required>
+      </label>
+      <label for="email">Correo electrónico
+        <input type="email" id="email" name="email" required>
+      </label>
+      <label for="phone">Teléfono
+        <input type="tel" id="phone" name="phone" required
+          pattern="^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$"
+          title="Debe ser un número válido. El código de país, el cero delante de la característica y el 15 delante del número celular son opcionales" />
+      </label>
+      <input type="submit" value="aceptar">
+      <input type="reset" value="limpiar">
+      <input type="button" id="close-modal" value="cancelar">
+
+    </form>
+  </dialog>
+
+  <!-- modal with pure html
+    <dialog id="modal">
+    <h2>Modal pop up native HTML</h2>
+    <p>this is a modal created with &lt;dialog&gt; element</p>
+    <button id="close-modal">close</button>
+  </dialog> -->
+
+  <script>
+    const openModal = document.getElementById("open-modal");
+    const closeModal = document.getElementById("close-modal");
+    openModal.addEventListener("click", () => modal.showModal());
+    closeModal.addEventListener("click", () => modal.close())
+  </script>
+</body>
+
+</html>
